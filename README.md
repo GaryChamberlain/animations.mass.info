@@ -1,1 +1,1 @@
-# animations.mass.info
+http://fun.mass.info
