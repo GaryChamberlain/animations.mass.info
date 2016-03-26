@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Easter!</title>
+    <script src="js/pro.greensock.min.js"></script>
+    <script src="js/pro.motion.min.js"></script>
+</head>
+<body>
+<div id="canvas"></div>
+</body>
+<script>
+    function openStory(story) {
+        var playback = Pro.Motion.init(
+                //document.getElementById('canvas'),
+				document.body,
+                story,
+                {
+                    auto: {
+                        start: true,
+                        advance: true,
+                        advanceDelay: 0,
+                        restart: true,
+                        resize: true
+                    },
+                    controls: {
+                        type: "track",
+                        autoHide: true,
+                        //color: "white",
+                        //highlightColor: "yellow",
+                        //backColor: "navy",
+                        //stepColor1: "transparent",
+                        //stepColor2: "rgba(255,255,255,0.5)",
+                        startHint: true
+                    },
+                    keyboard: true,
+                    touch: true,
+                    debugBar: false
+                });
+    }
+</script>
+<script src="Easter.js"></script>
+</html>
