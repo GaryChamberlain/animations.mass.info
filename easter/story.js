@@ -98,7 +98,7 @@ ProStyle.Stories.story = {
 					init: {font: 10, color: "#FBFF0F", position: {z: -150}, opacity: 0, scale: 0,textShadow: [[0,0,2,"black"],[0,0,2,"black"],[0,0,2,"black"]]},
 					scripts: [ { actions: [
 						{delay: 30, animation: {duration: 4, ease: "elastic"}, position:{z: 2}, opacity:false, scale:false},
-						{delay: 1, animation:{duration:3, ease:"backup in"}, rotation:180, position:70, opacity: 0}] }]
+						{delay: 1, animation:{duration:3, ease:"back in"}, rotation:180, position:70, opacity: 0}] }]
 				},
 				{   itemType: "image",
 					src: "images/egg-sm.png",
@@ -117,7 +117,7 @@ ProStyle.Stories.story = {
 							opacity: 30
 						},
 						{
-							anim: {duration: 3, ease: "backup in"},
+							anim: {duration: 3, ease: "back in"},
 							rot: 90,
 							pos: 100,
 							opacity: 0
@@ -145,7 +145,7 @@ ProStyle.Stories.story = {
 		{
 			items: [
 				{	itemType: "image",
-					src: "clipart/white1p.png", height: 100, width: 100,
+					src: "clipart/white1p.png", height: 120, width: 200,
 					scripts: [ { actions: [ {delay: 18, animation:2, opacity: 0}]}]
 				},
 				{	itemType: "image",
@@ -176,7 +176,7 @@ ProStyle.Stories.story = {
 				},
 				{
 					setup: { text: "Happy Easter from my family to yours!"},
-					init: {font: 7, width: 100, position: [0,35], textAlign: "center", textShadow: [0, 0, 5, "rgba(75,185,245,1)"]},
+					init: {color: "#FFF", font: 7, width: 100, position: [0,35], textAlign: "center", textShadow: [0, 0, 5, "rgba(75,185,245,1)"]},
 					charsInit: { position: [0,20], opacity: 0},
 					charsScripts: [ { actions: [{delay: 5, animation: {duration:3, stagger:0.05, ease: "elastic"}, opacity: false, position: false}] },
 									{actions:[{delay: 16, animation:2, opacity:0}]}]
@@ -187,13 +187,16 @@ ProStyle.Stories.story = {
 			items: [
 				{
 					itemType: "image",
-					setup: {src: "images/Alina.png"},
-					init: {position: 32}
+					src: "images/Alina.png",
+					height: 100,
+					init: {
+						pos: 25
+					}
 				},
 				{
 					itemType: "image",
 					src: "images/egg.png",
-					width: 60,
+					height: 50,
 					init:{
 						pos: [-17,-17],
 						opacity: 0,
@@ -208,23 +211,19 @@ ProStyle.Stories.story = {
 							anim: {duration: 4, ease: "elastic"},
 							rot:{x:0},
 							opacity:100
-						}},
-						{ action: {
-							delay: 25,
-							opacity:0
 						}}
 					]
 				},
 				
 				{
-				setup: {text: "'Your friendly neighborhood realtor.'"},
-				init: {font: 7, width: 100, position: [0,30], opacity:0, scale:50, textAlign: "center"},
+				setup: {text: "Your friendly neighborhood realtor."},
+				init: {color: "#FFF", font: 7, width: 100, position: [0,30], opacity:0, scale:50, textAlign: "center"},
 				scripts: [{ actions: [{delay: 2, animation: {duration: 2}, opacity:100, scale:100}]},
 						  { actions: [{delay: 7, animation: {duration: 1},position: [-5,26], opacity:95, scale:65}]}]
 				},
 				{
-				setup: {text: "'When you're ready, I'm here to help.'"},
-				init: {font: 7, width: 100, position: [0,33], opacity:0, scale:50, textAlign: "center"},
+				setup: {text: "When you're ready, I'm here to help."},
+				init: {color: "#FFF", font: 7, width: 100, position: [0,33], opacity:0, scale:50, textAlign: "center"},
 				scripts: [{ actions: [{delay: 7, animation: {duration: 2}, opacity:100, scale:100}]}]
 				}
 			]
